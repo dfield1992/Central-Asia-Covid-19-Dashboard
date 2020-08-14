@@ -235,6 +235,26 @@ a:active {
     width: 78%;
     margin: 10px auto;
 }
+.map-area h4 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px steelblue;
+    font-weight: bold;
+    color: #fff;
+    width: 83%;
+    margin: 0px auto;
+}
+.map-area h5 {
+    font-size: 14px;
+    padding: 8px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px steelblue;
+    font-weight: bold;
+    color: #fff;
+    width: 83%;
+    margin: 0px auto;
+}
+
 .graph-area{
     position:relative;
     width:95%;
@@ -251,6 +271,33 @@ a:active {
     color: #fff;
     width: 78%;
     margin: 10px auto;
+}
+.graph-area h4 {
+    font-size: 29px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px steelblue;
+    font-weight: bold;
+    color: #fff;
+    width: 83%;
+    margin: 0px auto;
+}
+.graph-area h5 {
+    font-size: 14px;
+    padding: 8px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fff;
+    width: 83%;
+    margin: 0px auto;
+}
+.graph-area h6 {
+    font-size: 12px;
+    padding: 4px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: #fff;
+    width: 83%;
+    margin: 0px auto;
 }
 .source-area{
     position:relative;
