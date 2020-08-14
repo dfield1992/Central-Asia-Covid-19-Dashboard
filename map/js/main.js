@@ -90,7 +90,7 @@ function pointToLayer(feature, latlng, attributes){
     
     //create marker options
     var options = {
-    fillColor: "#00BFFF",
+    fillColor: "#5f9ea0",
     color: "#000",
     weight: 1.5,
     opacity: 1,
@@ -128,7 +128,7 @@ function pointToLayer(feature, latlng, attributes){
 };
 
 function calcPropRadius(attributeValue){
-        var scaleFactor = .05;
+        var scaleFactor = .04;
         var area = attributeValue * scaleFactor;
         var radius = Math.sqrt(area/Math.PI)*2;
         return radius;        
@@ -141,8 +141,11 @@ function Popup(properties, attribute, layer, radius) {
     this.layer = layer;
     this.country = properties.Name //Country Name 
     this.month = attribute.split("_")[0];//Split Months Attribute
+    this.health = properties.Link
     this.cases = this.properties[attribute]; //Display Numver of Covid Cases
-    this.content = "<p><b>Country:</b> " + this.country + "<br><b>Total Number of Confirmed Covid-19 Cases in " + this.month + ":</b><br>" + numberWithCommas(this.cases) + " people." + "</p>";
+    this.content = "<p><b>Country:</b> " + this.country + "<br><b>Total Number of Confirmed Covid-19 Cases in " + this.month + ":</b><br>" + numberWithCommas(this.cases) + " people." + "<br><b>Public Health Measures:</b> " + this.health;
+    
+ /*   <a href="https://www.dailymail.co.uk/health/article-8508129/Unknown-pneumonia-said-deadlier-coronavirus-sweeping-Kazakhstan.html" target ="_blank">*/
 
     this.bindToLayer = function () {
         this.layer.bindPopup(this.content, {
@@ -258,22 +261,22 @@ function createLegend(map, attributes){
             $(container).append('<div id="temporal-legend">')
 
             //start attribute legend svg string
-            var svg = '<svg id="attribute-legend" width="200px" height="90px">';
+            var svg = '<svg id="attribute-legend">';
 
-            //object to base loop on, gives position for text in legend
+            //Legend text placement 
             var circles = {
                 max: 40,
-                mean: 60,
-                min: 80,
+                mean: 90,
+                min: 135,
             };
             
             //loop to add each circle and text to svg string
             for (var circle in circles) {
                 //circle string, cx is the position of the cirlces
-                svg += '<circle class="legend-circle" id="' + circle + '" fill="#00BFFF" fill-opacity="0.8" stroke="#222418" cx="50"/>';
+                svg += '<circle class="legend-circle" id="' + circle + '" fill="#5f9ea0" fill-opacity="0.8" stroke="#222418" cx="90"/>';
 
                 //text string; x is the position of circle
-                svg += '<text id="' + circle + '-text" x="90" y="' + circles[circle] + '"></text>';
+                svg += '<text id="' + circle + '-text" x="170" y= "' + circles[circle] + '"></text>';
             };
 
             //close svg string
@@ -313,7 +316,7 @@ function updateLegend(map, attribute) {
 
         //assign the cy and r attributes, cy gives position for circles in legend and makes sure they are all anchored together
         $('#' + key).attr({
-            cy: 85 - radius,
+            cy: 140 - radius,
             r: radius
         });
 

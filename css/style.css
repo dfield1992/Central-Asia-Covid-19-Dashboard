@@ -29,20 +29,20 @@ header {
 nav {
     position: fixed;
     width: 100%;
-    line-height: 60px;
+    line-height: 10px;
     z-index: 9999;
 }
 
 nav ul{
     float:right;
     margin: 0;
-    padding-right:42px;
+    padding-right:20px;
     list-style: none;
 }
 
 nav ul li {
     display: inline-block;
-    padding: 16px 52px;
+    padding: 16px 22px;
 }
 
 nav a {
@@ -163,13 +163,35 @@ h5{
 }
 
 h6{
-    font-size: 32px;
+    font-size: 14px;
     letter-spacing: 1px;
-    text-shadow: 2px 2px steelblue;
+    text-shadow: 1px 1px cadetblue;
     font-weight: bold;
     color: #fff;
-    width: 83%;
+    width: 78%;
     margin: 10px auto;
+}
+
+a {
+  color: #fff;
+}
+a:link {
+  color: #fff;
+}
+
+/* visited link */
+a:visited {
+  color: #fff;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+}
+
+/* selected link */
+a:active {
+  color: blue;
 }
 
 .about-area{
@@ -186,6 +208,14 @@ h6{
     line-height: 28px;
     color: #fff;
     text-align: justify;
+}
+.about-area h4 {
+        color: black;
+        font-size: 12px;
+        font-family: "Georgia";
+        align-content: center;
+        line-height: 28px;
+        letter-spacing: 1px;
 }
 
 .map-area{

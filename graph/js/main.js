@@ -176,11 +176,11 @@
     function makeColorScale(data) {
         var blue = ['#d3e5e8', '#a5bfcf', '#7d9fb8', '#557fa1', '#2e638c'] // Cases
         var red = ['#fee5d9', '#fcae91', '#fb6a4a', '#de2d26', '#a50f15'] // Deaths
-        var green = ['#edf8e9', '#bae4b3', '#74c476', '#31a354', '#006d2c'] // Recovery
-        var gray = ['#f7f7f7', '#cccccc', '#969696', '#636363', '#252525'] // Population
+        var green = ['#c0e6ba', '#bae4b3', '#74c476', '#31a354', '#006d2c'] // Recovery
+        var purple = ['#c9cae3', '#aeadd3', '#928ec3', '#796db2', '#64469e'] // Population
 
 
-        var colorArrays = ['Cases', blue, 'Deaths', red, 'Recovered', green, 'Population', gray]
+        var colorArrays = ['Cases', blue, 'Deaths', red, 'Recovered', green, 'Population', purple]
 
         var colorClasses = colorArrays[colorArrays.indexOf(expressed) + 1]
 

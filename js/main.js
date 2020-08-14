@@ -83,9 +83,6 @@
             console.log(othercountries)
             console.log(centralasia)
             
-            //place graticule on the map
-            //setGraticule(map, path);
-            
             //Bring in Central Asia Topojson and its surrounding countries Topojson
             var otherCountries = topojson.feature(othercountries, othercountries.objects.Countries),
                 centralAsia = topojson.feature(centralasia, centralasia.objects.Final).features;
@@ -119,26 +116,7 @@
 
     };
     
-/*    
-        function setGraticule(map, path) {
-        //create graticule generator
-        var graticule = d3.geoGraticule()
-            .step([5, 5]); //place graticule lines every 5 degrees of longitude and latitude
 
-        //create graticule background
-        var gratBackground = map.append("path")
-            .datum(graticule.outline()) //bind graticule background
-            .attr("class", "gratBackground") //assign class for styling
-            .attr("d", path) //project graticule
-
-        var gratLines = map.selectAll(".gratLines") //select graticule elements that will be created
-            .data(graticule.lines()) //bind graticule lines to each element to be created
-            .enter() //create an element for each datum
-            .append("path") //append each element to the svg as a path element
-            .attr("class", "gratLines") //assign class for styling
-            .attr("d", path); //project graticule lines
-
-    };*/
     
     //to join covid data csv and central asia topojson file 
     function joinData(centralAsia, csvData) {

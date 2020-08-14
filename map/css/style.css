@@ -34,19 +34,24 @@ border: solid black 2px;
 
 .legend-control-container {
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 5px;
-    line-height: 25px;
+    line-height: 5px;
     text-align: center;
-    height: auto;
-    width: auto;
-    border-radius: 15px;
+    height: 210px;
+    width: 275px;
+    border-radius: 5px;
     border: solid black 2px;
 }
-
+/*Title of bottom right legend */
 #temporal-legend {
     text-align: center;
-    width: 190px;
+    padding: 20px;
+    width: 170px;
+    height: 20px;
     overflow: normal;
+}
+#attribute-legend {
+    width: 300px;
+    height:auto;
 }
 
 .range-slider {
